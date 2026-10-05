@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy — Mellow for Twitch</title>
+  <style>
+    :root { color-scheme: light dark; }
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+      line-height: 1.6;
+      max-width: 42rem;
+      margin: 2rem auto;
+      padding: 0 1.25rem 3rem;
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem 1.25rem;
+      margin-bottom: 1.75rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid color-mix(in srgb, currentColor 20%, transparent);
+      font-size: 0.95rem;
+    }
+    nav a[aria-current="page"] { font-weight: 600; text-decoration: none; }
+    h1, h2 { line-height: 1.25; }
+    table { border-collapse: collapse; width: 100%; margin: 1rem 0; }
+    th, td { border: 1px solid color-mix(in srgb, currentColor 25%, transparent); padding: 0.5rem 0.65rem; text-align: left; }
+    th { font-weight: 600; }
+    a { color: #9147ff; }
+  </style>
+</head>
+<body>
+  <nav><a href="index.html" aria-current="page">Privacy Policy</a><a href="terms.html">Terms of Use</a><a href="security.html">Security</a></nav>
+<h1>Privacy Policy — Mellow for Twitch</h1>
+<p><strong>Last updated:</strong> October 5, 2026</p>
+<p>This privacy policy describes how the <strong>Mellow for Twitch</strong> Chrome extension (“Extension,” “we,” “our”) handles information when you install and use it.</p>
+<p><strong>Related documents:</strong> <a href="terms.html">Terms of Use</a> · <a href="security.html">Security Policy</a> · <a href="https://github.com/kzmanakzm-cpu/MellowForTwitch/blob/main/NOTICE.md">Copyright &amp; trademarks</a> (repository)</p>
+<h2>Summary</h2>
+<ul>
+<li>The Extension does <strong>not</strong> collect, sell, or transmit your personal data to us or to third parties.</li>
+<li>The Extension runs <strong>only</strong> on <code>https://www.twitch.tv/*</code> pages you visit.</li>
+<li>Your preferences are stored <strong>locally</strong> in your browser via Chrome’s <code>storage</code> API.</li>
+</ul>
+<h2>Information we do not collect</h2>
+<p>We do <strong>not</strong>:</p>
+<ul>
+<li>Operate servers or backends that receive data from the Extension</li>
+<li>Use analytics, advertising, or tracking SDKs</li>
+<li>Request your Twitch account credentials or OAuth tokens</li>
+<li>Read or exfiltrate chat messages, follow lists, or profile data</li>
+</ul>
+<h2>Information processed on your device</h2>
+<h3>Extension settings</h3>
+<p>Options you change (blur, spread, brightness, frame rate, layout-related toggles, and similar) are saved with <code>chrome.storage.local</code> on your device. They stay on your device unless you remove the Extension or clear extension data in Chrome.</p>
+<h3>Twitch pages and video playback</h3>
+<p>On Twitch watch pages, the Extension:</p>
+<ul>
+<li>Injects UI and styles to render a soft ambient glow behind the video player</li>
+<li>Samples the <strong>visible video frame</strong> into small in-memory canvases on your device to derive edge colors for the effect</li>
+<li>Does <strong>not</strong> call <code>getImageData</code> or otherwise read pixel buffers for transmission off-device</li>
+<li>Does <strong>not</strong> record, store, or upload video or audio</li>
+</ul>
+<p>All of this processing happens locally in the tab while the Extension is enabled.</p>
+<h2>Permissions</h2>
+<table>
+<thead>
+<tr>
+<th>Permission</th>
+<th>Why it is used</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>storage</code></td>
+<td>Save and load your Extension settings on your device</td>
+</tr>
+<tr>
+<td><code>https://www.twitch.tv/*</code></td>
+<td>Run the content script and styles only on Twitch watch pages</td>
+</tr>
+</tbody>
+</table>
+<p>The Extension does not request broad host access beyond Twitch.</p>
+<h2>Data sharing</h2>
+<p>We do not share user data with third parties because we do not collect user data through the Extension.</p>
+<h2>Children</h2>
+<p>The Extension is not directed at children under 13, and we do not knowingly collect information from children.</p>
+<h2>Changes</h2>
+<p>We may update this policy when the Extension changes. The “Last updated” date at the top will reflect the latest revision. Continued use after changes constitutes acceptance of the updated policy.</p>
+<h2>Contact</h2>
+<p>For privacy questions about this Extension, open an issue at <a href="https://github.com/kzmanakzm-cpu/MellowForTwitch-privacy/issues">MellowForTwitch-privacy</a> or contact the developer address listed on the Chrome Web Store listing. For security-sensitive reports, follow <a href="security.html">SECURITY.md</a> instead of public issues.</p>
+<h2>Third-party services</h2>
+<p>Twitch is operated by Twitch Interactive, Inc. Your use of Twitch is subject to <a href="https://www.twitch.tv/p/legal/privacy-notice/">Twitch’s Privacy Notice</a> and terms. This Extension is an independent project and is <strong>not</strong> affiliated with, endorsed by, or sponsored by Twitch.</p>
+</body>
+</html>

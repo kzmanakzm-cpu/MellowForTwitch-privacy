@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Security Policy — Mellow for Twitch</title>
+  <style>
+    :root { color-scheme: light dark; }
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+      line-height: 1.6;
+      max-width: 42rem;
+      margin: 2rem auto;
+      padding: 0 1.25rem 3rem;
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem 1.25rem;
+      margin-bottom: 1.75rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid color-mix(in srgb, currentColor 20%, transparent);
+      font-size: 0.95rem;
+    }
+    nav a[aria-current="page"] { font-weight: 600; text-decoration: none; }
+    h1, h2 { line-height: 1.25; }
+    table { border-collapse: collapse; width: 100%; margin: 1rem 0; }
+    th, td { border: 1px solid color-mix(in srgb, currentColor 25%, transparent); padding: 0.5rem 0.65rem; text-align: left; }
+    th { font-weight: 600; }
+    a { color: #9147ff; }
+  </style>
+</head>
+<body>
+  <nav><a href="index.html">Privacy Policy</a><a href="terms.html">Terms of Use</a><a href="security.html" aria-current="page">Security</a></nav>
+<h1>Security Policy — Mellow for Twitch</h1>
+<p><strong>Last updated:</strong> October 5, 2026</p>
+<p>We take reasonable care in designing the Extension, but <strong>no software is perfectly secure</strong>. This document describes how to report security issues and what you can expect.</p>
+<h2>Supported versions</h2>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Supported</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Latest release on the Chrome Web Store</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Older store versions</td>
+<td>Best effort only</td>
+</tr>
+<tr>
+<td>Unpacked / developer builds from source</td>
+<td>Supported only for the current <code>main</code> branch at report time</td>
+</tr>
+</tbody>
+</table>
+<h2>Design intent (security-relevant)</h2>
+<ul>
+<li>The Extension requests <strong><code>storage</code></strong> and <strong><code>https://www.twitch.tv/*</code></strong> only (see <code>manifest.json</code>).</li>
+<li>It does <strong>not</strong> implement remote servers, analytics SDKs, or broad <code>&lt;all_urls&gt;</code> access.</li>
+<li>Video processing is intended to occur <strong>locally</strong> in the browser tab; see the <a href="PRIVACY.md">Privacy Policy</a>.</li>
+</ul>
+<p>If you believe the Extension behaves differently (e.g. unexpected network requests, data exfiltration), please report it.</p>
+<h2>Reporting a vulnerability</h2>
+<p><strong>Please do not</strong> open a public GitHub issue for security-sensitive reports.</p>
+<ol>
+<li>
+<p>Prefer <strong>GitHub Private Security Advisories</strong> on the public contact repository:<br />
+   https://github.com/kzmanakzm-cpu/MellowForTwitch-privacy/security/advisories/new<br />
+   (If that repository cannot accept advisories, use the store developer contact email listed on the Chrome Web Store.)</p>
+</li>
+<li>
+<p>Include:
+   - A clear description and impact
+   - Steps to reproduce
+   - Affected Extension version and Chrome version
+   - Any proof-of-concept (minimal is best)</p>
+</li>
+<li>
+<p>Allow reasonable time to investigate and remediate before public disclosure. We aim to acknowledge reports within <strong>14 days</strong> when possible.</p>
+</li>
+</ol>
+<h2>Safe harbor</h2>
+<p>We will not pursue legal action against researchers who report issues in good faith, avoid privacy violations and service disruption, and give us a reasonable opportunity to fix the issue—consistent with commonly accepted responsible disclosure practices.</p>
+<h2>No bug bounty</h2>
+<p>Unless we explicitly announce one, there is <strong>no paid bug bounty</strong> program.</p>
+<h2>Out of scope</h2>
+<p>The following are generally <strong>out of scope</strong> for this policy:</p>
+<ul>
+<li>Vulnerabilities in Twitch, Chrome, or the Chrome Web Store themselves</li>
+<li>Social engineering, phishing, or physical attacks</li>
+<li>Issues requiring compromised user machines or malicious other extensions</li>
+<li>Theoretical issues without practical exploitability on current versions</li>
+</ul>
+<h2>Disclaimer</h2>
+<p>This policy does not create a contractual obligation beyond applicable law. Security fixes are provided <strong>without warranty</strong>; see <a href="TERMS.md">TERMS.md</a>.</p>
+</body>
+</html>
